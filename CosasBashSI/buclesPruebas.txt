@@ -32,3 +32,6 @@ otros parámetros >= $1
 ==========================================================
 
 Crear un script al que le pase como parametro un directotio, si el directorio existe se guarda en un array todos los ficheros de ese directorio.
+
+==========================================================
+script que le pasas como parametro 2 numeros, obligatoriamente solo le paso 2 parametros. Obligatoriamente hay que crear una funcion que realice dichos calculos
