@@ -21,3 +21,14 @@ ______________________
 Tiro dos dados, me aparece la puntuacion de cada dadojunto con la suma de las 2 puntuaciones. 
 seguidamente tira el ordenador los dados, si mi puntuacion es mayor gano sino pierdo. 
 seguinmos jugando hasta que pulso la tecla f.
+
+==========================================================
+Parámetros de un Script
+
+./nombre_del_script.sh (parametros)
+
+nombredelscript = $0
+otros parámetros >= $1
+==========================================================
+
+Crear un script al que le pase como parametro un directotio, si el directorio existe se guarda en un array todos los ficheros de ese directorio.
