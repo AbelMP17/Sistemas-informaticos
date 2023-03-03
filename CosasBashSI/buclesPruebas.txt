@@ -1,0 +1,23 @@
+==========Bucle con array==============
+array=(0 1 2 3 4 5 6)
+
+=======================================
+==========Bucle importante=============
+for i in "cualquierNombre"
+do
+	echo $i
+done < fichero.txt
+=======================================
+
+realizar un script con un menu con dos opciones. 1 listar todos los ficheros que empiecen por vocal de /etc. 2 contar 
+cuantos usuarios del sistema tienen la consola /bin/bash. 3 sali. al salir pregunta si estas seguro y si digo que si
+carita feliz con 0 de errorLevel, y si digo que no sigue el bucle.
+
+crear un script que me pida el nombre de un fichero. si el fichero existe, me mostrara el contenido del fichero.
+
+_____________________
+juego de los dados:
+______________________
+Tiro dos dados, me aparece la puntuacion de cada dadojunto con la suma de las 2 puntuaciones. 
+seguidamente tira el ordenador los dados, si mi puntuacion es mayor gano sino pierdo. 
+seguinmos jugando hasta que pulso la tecla f.
