@@ -1,0 +1,15 @@
+Clonado y restauración de equipos por red:
+paso 1: 
+Crear una mv con un hdd de 40gb linux x64, le metemos un cd con clonezilla server (Lo pinchamos en una Red I.)
+En esa red interna vamos a pinchar un Debian 11 apagada.
+Enciendo Clonezilla server y hacer un clonado a traves de la red.
+
+Decirle a Debian que arranque por la red ((PXE) configuracion de la mv)
+
+Guardamos la imagen en el hdd de 40gb y lo llamamos clonado de Debian11
+Cuando termine el clonado apagamos la máquina debian11
+
+paso 2: 
+Pinchamos 2 mv con un hdd de la misma capacidad. Y las arrancamos por red.
+Y restauramos un clonado automáticamente. 
+y las llamamos hdd_clonado_AMP

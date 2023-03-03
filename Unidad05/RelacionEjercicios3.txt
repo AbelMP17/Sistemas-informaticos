@@ -1,0 +1,40 @@
+1. 	a) echo "Esto es un ejemplo de tr para el Módulo de SI de 1 de DAW"| tr "a" "A"
+	b) echo "Esto es un ejemplo de tr para el Módulo de SI de 1 de DAW"| tr "aerou" "AEIOU"
+	c) echo "Esto es un ejemplo de tr para el Módulo de SI de 1 de DAW"| tr "[:lower:]" "[:upper:]"
+	d) echo "Esto es un ejemplo de tr para el Módulo de SI de 1 de DAW"| tr "[:lower:]" "[:upper:]" >> ficherApartadoD.txt
+	e) cat ficherApartadoD.txt | tr "[:upper:]" "[:lower:]" >> ficherApartadoD.txt
+	f) echo "Esto es un ejemplo de tr para el Módulo de SI de 1 de DAW"| tr "a-z|A-Z|0-9|áéíóú" "AB"
+	g) echo "Esto es un ejemplo de tr para el Módulo de SI de 1 de DAW" | tr "a" "u" | tr "u" "a"
+	h) echo "Esto es un ejemplo de tr para el Módulo de SI de 1 de DAW" | tr "aeiuo|áéíóú|AEIOU|ÁÉÍÓÚ" " "
+	i)
+	j) echo "Esto es un ejemplo de tr para el Módulo de SI de 1 de DAW" | tr -d "[:alpha:]|áéíóú|ÁÉÍÓÚ"
+	k) echo "Esto es un ejemplo de tr para el Módulo de SI de 1 de DAW" | tr -d "[:digit:]"
+	l) 
+	m) echo "Esto es un ejemplo de tr para el Módulo de SI de 1 de DAW" | tr -d "[:digit:]"
+	n) 
+	o) echo "Esto es un ejemplo de tr para el Módulo de SI de 1 de DAW" | tr " " "\t"
+	p) echo "Esto es un ejemplo de tr para el Módulo de SI de 1 de DAW" | tr " " "\v"
+	q) echo "Esto es un ejemplo de tr para el Módulo de SI de 1 de DAW" | tr " " "\n"
+
+2. 	find /bin -type f -name 'm*' | wc -l
+3. 	find /run -type d -name 'a*'
+4. 	find /run -type f -name '*t' -o -name 'u*'
+5. 	find /run -type f -size -100k
+6. 	find /run -type f -size 0k | wc -l
+7. 	find /run -type d -empty -printf "%p\n" | wc -l ; find /bin -type d -empty -printf "%p\n" | wc -l
+8. 	find /run -maxdepth 1 -type d -empty -o -type f -empty | wc -l
+9. 	find / -maxdepth 1 -user root -type d -empty
+10.	find / -maxdepth 2 -user root -type f -size -500k | wc -l
+11. 	find /run -type d -empty -group root | wc -l
+12.	find /dev -not -user root
+13.	find /dev -type d -perm 755
+14. 	mkdir ~/copia; find /etc -type f -name 'u*' -exec cp {} ~/copia \;
+15. 	find /etc -type f -name 'w*' -perm 644 -size +1k -exec ls -l {} \;
+
+
+
+
+
+
+
+

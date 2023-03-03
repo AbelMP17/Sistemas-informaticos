@@ -1,0 +1,41 @@
+1.- 	a) cat ./futbol.txt|tail +2|head -6|sort -n -t":" -k5|cut -d":" -f1,5 
+	b) cat ./futbol.txt|sort -rn -t":" -k2|tail +3|head -2
+	c) cat ./futbol.txt|sort -rn -t":" -k2|head -1|cut -d":" -f1 >> campeon.txt
+
+3. 	a) grep -E "aba" ./ficherotexto.txt
+	b) grep -E "b{3}" ./ficherotexto.txt
+
+4. 	grep -E -n "b{3}" ./ficherotexto.txt
+	- Esta función te enumera las filas mostradas.
+
+5.	grep -E -n -v "b{3}" ./ficherotexto.txt
+	- Esta función elimina las lineas que contienen la condición especificada.
+
+6. 	grep -e "aba" -e "bba" ./ficherotexto.txt
+	
+7. 	grep "hello" ./ficherotexto.txt
+	- Se muestran las filas que contengan la palabra 'hello' teniendo en cuenta si es minúscula o mayúscula.
+
+8.	grep -i "hello" ./ficherotexto.txt
+	- Este ignora si está escrito en mayúscula o minúscula.
+
+9. 	a) grep "^aa" ./ficherotexto.txt
+	b) grep "ba$" ./ficherotexto.txt
+	c) grep "^a.*b$" ./ficherotexto.txt
+	d) grep "\<a" ./ficherotexto.txt
+	e) grep -v "a\>" ./ficherotexto.txt 
+	f) grep -E -v "a{3}" ./ficherotexto.txt
+	g) grep -E "^aa[^a]" ./ficherotexto.txt
+	h) grep -E "(ba){2}" ./ficherotexto.txt
+	i) grep -v "b" ./ficherotexto.txt
+	j) grep -E "\.{3}" ./ficherotexto.txt
+	k) grep -E "^[a|h]" ./ficherotexto.txt
+	l) grep -E -v "a$" ./ficherotexto.txt
+
+11.	a) grep -E "^[[:digit:]]*[[:digit:]]$" ./f.txt
+	b) grep -E "[,.]" ./f.txt | grep -vE "[[:alpha:]]"
+	c) grep -E "^[96][[:digit:]]{8}" ./f.txt
+	d) grep -E -i "[[:digit:]]{7,8}[a-z]" ./f.txt
+	e) grep -E "([0-2][0-9]|3[0-1])/(0[1-9]|1[0-2])/[[:digit:]]{4}" ./f.txt
+	f) grep -E -v "[[:upper:]]|^[[:digit:]]" ./f.txt
+	g) grep -E "^[[:upper:]][[:lower:]]" ./f.txt

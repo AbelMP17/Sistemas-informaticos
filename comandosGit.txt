@@ -1,0 +1,23 @@
+git config --global user.name Abelmp17 -> Poner nombre global del git
+
+git config --global user.email abelmp890@gmail.com -> Poner email global del Git
+
+code ~/.gitconfig -> Editar la configuracion del git desde esl editor de codigo
+
+git init -> iniciamos el git 
+
+git status -> estado del git
+
+git add <fichero> -> añadimos fichero al git para que esté en seguimiento
+
+git status -s -> miras el estado de los archivos del git
+
+git commit -u <nombreRaíz> <master/main> -> Haces un commit de los archivos añadidos
+
+git remote https://github.com/<nombreUsuario>/<nombreRepositorio> -> Nos conectamos al repositorio
+
+git pull -> obtenemos los archivos subidos al repositorio
+
+git push 
+
+token generado -> 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
