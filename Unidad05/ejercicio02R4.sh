@@ -65,9 +65,8 @@ do
 	function borrar(){
 		contenido=""
 		read -p 'Escribe tu nombre: ' nombre3
-		contenido=`grep -v "$nombre3" ./lista.txt`
-		rm -rf ./lista.txt
-		echo $contenido >> ./lista.txt
+		grep -i "$nombre3" lista.txt
+		sed -i "/$nombre3/d" lista.txt
 	}
 	function salir(){
 		continuar=1

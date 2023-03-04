@@ -1,6 +1,11 @@
 #!/bin/bash
 ##Autor: AbelMP
 
+clear
+operacion=""
+num1=0
+num2=0
+
 if [[ $# -ne 3 ]]
 then
 	echo 'El numero de parametros es incorrecto.'
@@ -15,22 +20,31 @@ then
 	exit 1
 fi
 
+num1=$2
+num2=$3
+
 function suma(){
-	echo "La suma de $2 y $3 es: "
-	echo $2+$3 | bc
+	echo "La suma de $num1 y $num2 es: $(($num1 + $num2))"
+	exit 0
 }
 function resta(){
-	echo "La resta de $2 y $3 es: "
-	echo $2-$3 | bc
+	echo "La resta de $num1 y $num2 es: $(($num1 - $num2))"
+	exit 0
 }
 function producto(){
-	echo "El producto de $2 y $3 es: "
-	echo $2*$3 | bc
+	echo "El producto de $num1 y $num2 es: $(($num1 * $num2))"
+	exit 0
 }
 
 function cociente(){
-	echo "El cociente de $2 y $3 es: "
-	echo $2/$3 | bc
+	if [[ $num1 -eq 0 ]]
+	then
+		echo "No se puede hacer una division entre 0."
+		exit 1
+	fi
+
+	echo "El cociente de $num1 y $num2 es: $(($num1 / $num2))"
+	exit 0
 }
 
 case $1 in
