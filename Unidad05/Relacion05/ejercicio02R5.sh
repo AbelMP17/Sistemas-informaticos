@@ -19,9 +19,7 @@
 
 clear
 
-continuar=0
-
-while [[ continuar -eq 0 ]]
+while true
 do
 	echo "======================================"
 	echo "Menu:"
@@ -65,11 +63,11 @@ do
 	function borrar(){
 		contenido=""
 		read -p 'Escribe tu nombre: ' nombre3
-		grep -i "$nombre3" lista.txt
-		sed -i "/$nombre3/d" lista.txt
+		grep -i "^$nombre3:" lista.txt
+		sed -i "/$nombre3:/d" lista.txt
 	}
 	function salir(){
-		continuar=1
+		exit 0
 	}
 
 	case $opcion in
@@ -87,7 +85,6 @@ do
 		;;
 		5)
 			salir
-			exit 0
 		;;
 		*)
 			echo 'Opcion erronea.'

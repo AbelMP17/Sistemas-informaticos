@@ -9,9 +9,7 @@
 
 clear
 
-continuar=0
-
-while [[ continuar -eq 0 ]]
+while true
 do
 	echo "======================================"
 	echo "Menú: "
@@ -24,9 +22,10 @@ do
 		1)
 			if [[ -f ./miscorreos.txt ]]
 			then
-				cat ./miscorreos.txt
+				cat ./miscorreos.txt	
 			else
-				echo "Archivo no encontrado."
+				read -p "Archivo no encontrado. Pulsa ENTER para volver al menú."
+				clear
 			fi
 		;;
 		2)
@@ -36,7 +35,7 @@ do
 			echo "$nombre:$email" >> ./miscorreos.txt
 		;;
 		3)
-			continuar=1
+			exit 0
 		;;
 		*)
 			echo "Opcion no valida."
