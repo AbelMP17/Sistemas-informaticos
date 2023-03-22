@@ -1,0 +1,8 @@
+a	aa	ab	ba	aaa
+aba	baa	bbb	aaaa	aaba
+aabb	abab	baaa	baba	bbbb
+aabbb	ababa	abbba	bbaabb	bbbaa
+aaabbb	bababa	bbaabb	bbabaa	bbbabb
+aa	aaaaa	aa
+hello...hello
+HELLO

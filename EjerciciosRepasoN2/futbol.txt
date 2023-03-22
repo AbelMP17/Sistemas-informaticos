@@ -1,0 +1,8 @@
+Equipo:puntos:GF:GC:Fundacion
+Levante:43:30:34:1930
+Madrid:53:50:26:1899
+Barcelona:60:63:20:1898
+Valencia:40:32:40:1904
+Sevilla:8:44:21:1902
+Atarfe:110:85:45:1910
+Total Equipos:6

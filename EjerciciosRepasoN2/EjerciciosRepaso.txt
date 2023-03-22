@@ -1,0 +1,47 @@
+1. 
+a) cat futbol.txt | tail +2 | head -6 | sort -n -t":" -k5 | cut -d":" -f1
+b) cat futbol.txt | tail +2 | head -6 | sort -nr -t":" -k2 | cut -d":" -f1 | head -4 | tail -2 
+c) cat futbol.txt | tail +2 | head -6 | sort -n -t":" -k2 | cut -d":" -f1 | head -1 >> campeon.txt
+
+3.
+a) grep "aba" ficherotexto.txt
+b) grep -E "b{3}" ficherotexto.txt 
+
+4. grep -nE "b{3}" ficherotexto.txt 
+// El parametro -n enumera las lineas
+
+5. grep -vnE "b{3}" ficherotexto.txt 
+// El parametro -v coge las cadenas que no cumplan la condicion propuesta
+
+6. grep -E "aba|bba" ficherotexto.txt
+// El parametro -E permite escribir expresiones regulares en la condicion
+
+7. grep "hello" ficherotexto.txt
+// Se muestra la penultima linea
+
+8. grep -i "hello" ficherotexto.txt
+// Ignora si es mayus o minus
+
+9. 
+a) grep "^aa" ficherotexto.txt // que empieza por aa
+b) grep "ba$" ficherotexto.txt // que termina por ba
+c) grep -E "^a.*b$" ficherotexto.txt // que empieza por a y termina por b, el . significa cualquier caracter y el * significa de uno a muchos
+d) grep "\ba" ficherotexto.txt // lineas con palabras que empiezan por "a", se usa \b para que vaya palabra por palabra
+e) grep -v '\ba[a-z]*\b' ficherotexto.txt // lineas con palabras que terminan en cualquier cosa menos en "a" 
+f) grep -vE "a{3}" ficherotexto.txt // linea qu no contiene cadenas con 3 "a" consecutivas
+g) grep -iE "^a{2}[b-z]" ficherotexto.txt //linea que empieze por 2 a pero el tercer caracter se otro
+h) grep -E "(ba){2}" ficherotexto.txt // linea que contiene 2 veces ba
+i) grep -v "\bb" ficherotexto.txt // lineas que no contienen palabras con b
+j) grep -E "\.{3}" ficherotexto.txt // linea que contiene tres . seguidos
+k) grep -E "^a|^h" ficherotexto.txt // lineas que empiezan por a o por h
+l) grep -v "a$" ficherotexto.txt // lineas que no terminan por a
+
+11. 
+a) grep "^[0-9]\+$" f.txt // lineas que solo contienen numeros enteros, el + significa un numero o varios  
+b) grep "^[0-9]\+\([.,][0-9]\+\)\?$" f.txt // linea que contiene decimales
+c) grep -E "^[96][0-9]{8}" f.txt // lineas con numeros de telefono
+d) grep -E "^[0-9]{7,8}[a-z]" f.txt  // lineas con dni de 7 u 8 numeros
+e) grep -E "([0-2][0-9]|3[01])/(0[0-9]|1[0-2])/([0-9]{4})" f.txt // linea que son fecha valida
+f) grep "^\b[a-z].*[a-z]" f.txt  // lineas con letras minusculas
+g) grep "^[A-Z][a-z]" f.txt // lineas que empizan por una letra mayuscula
+
