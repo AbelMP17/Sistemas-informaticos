@@ -1,0 +1,45 @@
+1. frase=`echo "Esto es un ejemplo de tr para el Módulo de SI de 1 de DAW"`
+a) echo $frase | tr "a" "A"
+b) echo $frase | tr "aeiou" "AEIOU"
+c) echo $frase | tr "[:lower:]" "[:upper:]" 
+d) echo $frase | tr "[:lower:]" "[:upper:]" >> fichero1D.txt
+e) cat fichero1D.txt | tr "[:upper:]" "[:lower:]" >> fichero1D.txt  
+f) echo $frase | tr "a" "A" | tr "[b-z]|[B-Z]" "B"
+g) echo $frase | tr "a" "u" | tr "u" "a" 
+h) echo $frase | tr "aeiouAEIOU" " "
+i) echo $frase | tr -cd "aeiouAEIOU"
+j) echo $frase | tr -cd "[:digit:]"
+k) echo $frase | tr -d "[:digit:]"
+l) echo $frase | tr -s "[:alpha:]"
+n) echo $frase | tr -s " "
+o) echo $frase | tr " " "\t"
+p) echo $frase | tr " " "\v"
+q) echo $frase | tr " " "\n"
+
+2. find /bin -type f -name 'm*'
+
+3. sudo find /run -type d -name 'a*'
+
+4. sudo find /run -type f -name "*t" -o -name "u*" 
+
+5. sudo find /run -type f -size -100k
+
+6. sudo find /run -type f -empty | wc -l 
+
+7. find /run -type d -empty -o -path "/bin" -type d -empty | wc -l
+
+8. sudo find /run -type d -o -type f -empty -maxdepth 1 
+
+9. sudo find / -maxdepth 1 -type d -user root -empty
+
+10. sudo find / -maxdepth 2 -type f -user root -size -500k | wc -l
+
+11. sudo find /run -type d -group root -empty | wc -l
+
+12. sudo find /dev -type d -o -type f ! -user root 
+
+13. sudo find /dev -type d -perm 755 
+
+14. sudo find /etc -type f -name "u*" -exec cp {} ./copia \;
+
+15. sudo find /etc -type f -name "w*" -perm 644 -size +1k -exec cat {} \;
