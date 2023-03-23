@@ -17,7 +17,7 @@ fi
 directorio=$1
 
 #Programa
-for archivo in "${@:2}"
+for archivo in "$@"
 do
 	if [[ ! -f "$archivo" ]]
 	then
