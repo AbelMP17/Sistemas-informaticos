@@ -2,7 +2,7 @@
 #Autor: AbelMP
 
 # Declarar un array vacío
-declare -a mi_array=()
+mi_array=()
 
 # Pedir datos al usuario hasta que escriba el número 0
 while true; do
