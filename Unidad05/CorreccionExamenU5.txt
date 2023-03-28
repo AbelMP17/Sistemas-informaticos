@@ -1,0 +1,42 @@
+Comando 1. Crear el usuario Gestor con el directorio de trabajo llamado /home/UserEmpresa siendo la consola bash
+	- useradd -m -d /home/UserEmpresa -s /bin/bash Gestor
+
+Comando 2. Cambia el dueño de los ficheros del direcotio /home/examen cuyo nombre no comienza por "a" para que el nuevo dueño sea el root dejando inalterado al grupo
+	- chown root:/home/examen/[^a]*
+
+Comando 3. Asignar permisos
+	- chmod 640 /home/examen/[ao]*[^s]
+
+Comando 4. Copia todos los ficheros del direcorio /etc incluyendo subdirectorios cuyo nombre empiece por vocal al directorio home del usuario conectado actualmente
+	- cp -R /etc/[aeiou]* ~
+
+Comando 5. 
+	- find /etc -type f -name ".conf" -exec ls -la {} | tr -s " " "|" | cut -d"|" -f4,11 \;
+
+Comando 6. 
+	- ls -1 /etc/*[02468] | wc -l
+
+Comando 7.
+	- mv /home/examen/*[is]* /etc
+
+Comando 8. 
+	- tar -czvf copia3.tar.gz /etc/[aeiou]*[^aeiou]
+
+Comando 9.
+	find /home -type f -name ".html" -size -500k -ctime 2 -exec ls -la {} \;
+
+Comando 10.
+	- ip a | grep "inet" -o "global" | tr -s " " "|" | cut -d"|" -f3 | cut -d"/" -f1
+
+Comando 11. 
+	- ls -la /etc | grep "^-" | tr -s " " "|" | cut -d"|" -f5,9 | sort -nr -k1 | head -1 | cut -d"|" -f3
+
+Comando 12.
+	- cat /etc/passwd | cut -d":" -f1,3,7 | sort -nr -t":" -k2
+
+Comando 13. 
+	a) cat misdatos.txt | cut -d":" -f2 | tail -6 >> apellidos.txt
+	b) cat misdatos.txt | cut -d":" -f3,4 | sort -nr -t":" -k2 >> usuarios.txt
+	c) cat ./apellidos.txt | grep -v "[aeiou]$"
+	d) cat misdatos.txt | cut -d":" -f3,4,6 | sort -r -t":" -k3 | wc -l
+
